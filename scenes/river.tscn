@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://cx27q4g3n16cc"]
+
+[ext_resource type="Texture2D" uid="uid://c601jahcsnr60" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/foreground_/foreground_.png" id="1_xw6w6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oupc5"]
+atlas = ExtResource("1_xw6w6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmun0"]
+atlas = ExtResource("1_xw6w6")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuaku"]
+atlas = ExtResource("1_xw6w6")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c73ol"]
+atlas = ExtResource("1_xw6w6")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7iml"]
+atlas = ExtResource("1_xw6w6")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5d1h"]
+atlas = ExtResource("1_xw6w6")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkksq"]
+atlas = ExtResource("1_xw6w6")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25r8i"]
+atlas = ExtResource("1_xw6w6")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fku5y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oupc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmun0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nuaku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c73ol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7iml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5d1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkksq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25r8i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+position = Vector2(31, 17)
+sprite_frames = SubResource("SpriteFrames_fku5y")
+animation = &"idle"
+autoplay = "idle"
+frame = 7
+frame_progress = 0.999101

@@ -1,0 +1,113 @@
+[gd_scene load_steps=8 format=3 uid="uid://d3jx3fwqdps5b"]
+
+[ext_resource type="Script" path="res://scripts/picture_book.gd" id="1_ngpqs"]
+[ext_resource type="Texture2D" uid="uid://cjrkl8mthn61b" path="res://assets/picturebooks/book1/p1.png" id="2_cx1i7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bgm4r"]
+texture = ExtResource("2_cx1i7")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7yit2"]
+bg_color = Color(0.0604934, 0.313018, 0.47871, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_heso0"]
+bg_color = Color(0.0588235, 0.313726, 0.478431, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7imf8"]
+bg_color = Color(0.639216, 0.172549, 0.0588235, 0.717647)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iclt8"]
+bg_color = Color(0.0588235, 0.313726, 0.478431, 0.498039)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="PictureBook" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ngpqs")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 222.0
+offset_right = -196.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bgm4r")
+
+[node name="Prev" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -87.0
+offset_right = 128.0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_7yit2")
+text = "◀⇠"
+
+[node name="Next" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -115.0
+offset_top = -86.0
+offset_right = 7.0
+offset_bottom = -4.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_heso0")
+text = "⇢▶️"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -56.5
+offset_top = -32.0
+offset_right = 56.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_7imf8")
+text = "Exit"
+
+[node name="Page" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.5
+offset_right = 91.5
+offset_bottom = 38.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_iclt8")
+text = "Page 1/4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Prev" to="." method="_on_prev_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

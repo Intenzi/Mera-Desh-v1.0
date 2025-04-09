@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://bwgfwq8an5tyq"]
+
+[ext_resource type="Texture2D" uid="uid://c601jahcsnr60" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/foreground_/foreground_.png" id="1_c51th"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_704sq"]
+atlas = ExtResource("1_c51th")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5wev"]
+atlas = ExtResource("1_c51th")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0cwf2"]
+atlas = ExtResource("1_c51th")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jw4mt"]
+atlas = ExtResource("1_c51th")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lmch"]
+atlas = ExtResource("1_c51th")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mivxb"]
+atlas = ExtResource("1_c51th")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6s0cg"]
+atlas = ExtResource("1_c51th")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7y3fl"]
+atlas = ExtResource("1_c51th")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g6neh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_704sq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5wev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0cwf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jw4mt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lmch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mivxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6s0cg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7y3fl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_g6neh")
+frame = 3
+frame_progress = 0.939363

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7pcbqsafc1j1"]
+
+[ext_resource type="Script" path="res://scripts/animatable_body_2d.gd" id="1_benw1"]
+
+[node name="triggerer" type="Node2D"]
+script = ExtResource("1_benw1")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(-1, -266)
+collision_mask = 2
